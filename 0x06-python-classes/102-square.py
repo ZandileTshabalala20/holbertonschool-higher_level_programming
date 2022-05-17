@@ -31,16 +31,20 @@ class Square:
         else:
             raise TypeError("size must be an integer")
 
-    def my_print(self):
-        """The summary line for a class docstring should fit on one line."""
-        i, j = 0, 0
-        if self._size == 0:
-            print()
-        else:
-            while i < self._size:
-                while j < self._size:
-                    print("#", end="")
-                    j += 1
-                print()
-                j = 0
-                i += 1
+    def __eq__(self, other):
+        return self.area() == other.area()
+
+    def __ne__(self, other):
+        return self.area() != other.area()
+
+    def __lt__(self, other):
+        return self.area() < other.area()
+
+    def __le___(self, other):
+        return self.area() <= other.area()
+
+    def __gt__(self, other):
+        return self.area() > other.area()
+
+    def __ge__(self, other):
+        return self.area() >= other.area()
