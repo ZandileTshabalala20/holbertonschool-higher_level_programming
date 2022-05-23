@@ -74,4 +74,4 @@ How to use the getattr function
 ---
 
 ## Author
-* **Derrick Gee** - [kai-dg](https://github.com/kai-dg)
+Zandile Tshabalala
