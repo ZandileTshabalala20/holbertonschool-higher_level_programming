@@ -39,4 +39,4 @@ How to find edge cases
 ---
 
 ## Author
-* **Derrick Gee** - [kai-dg](https://github.com/kai-dg)
+* **Zandile Tshabalala** - [ZandileTshabalala20] (https://github.com/ZandileTshabalala20)
