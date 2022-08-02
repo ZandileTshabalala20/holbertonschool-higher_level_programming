@@ -1,8 +1,24 @@
 #!/usr/bin/node
-
+/* Script that concats 2 files */
+const files = process.argv;
 const fs = require('fs');
-let content = '';
-
-content = content.concat(fs.readFileSync(process.argv[2]));
-content = content.concat(fs.readFileSync(process.argv[3]));
-fs.writeFileSync(process.argv[4], content);
+fs.readFile(files[2], 'utf8', function (err, data) {
+  if (err) {
+    return console.log(err);
+  }
+  fs.appendFile(files[4], data, function (err) {
+    if (err) {
+      return console.log(err);
+    }
+  });
+});
+fs.readFile(files[3], 'utf8', function (err, data) {
+  if (err) {
+    return console.log(err);
+  }
+  fs.appendFile(files[4], data, function (err) {
+    if (err) {
+      return console.log(err);
+    }
+  });
+});
