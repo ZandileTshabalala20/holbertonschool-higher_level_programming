@@ -1,20 +1,14 @@
 #!/usr/bin/node
+// JS script to define class that inherits from another class
+const newSquare = require('./5-square');
 
-const Rectangle = require('./5-square.js');
-
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-
+class Square extends newSquare {
   charPrint (c) {
-    if (c) {
-      for (let i = 0; i < this.height; i++) {
-        console.log(c.repeat(this.width));
-      }
-    } else if (c === undefined) {
-      for (let j = 0; j < this.height; j++) {
+    for (let count = 0; count < this.height; count++) {
+      if (c === undefined) {
         console.log('X'.repeat(this.width));
+      } else {
+        console.log(c.repeat(this.width));
       }
     }
   }
